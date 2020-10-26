@@ -12,11 +12,11 @@ import os
 
 
 def run(res_time, res_type, seed=0):
-    # hour = int(datetime.now().strftime("%H"))
+    hour = int(datetime.now().strftime("%H"))
 
-    # if hour >= 0 and hour <= 5:
-    #     print("Program does not function between midnight and 6:00AM.")
-    #     return
+    if hour >= 0 and hour <= 5:
+        print("Program does not function between midnight and 6:00AM.")
+        return
 
     otu_code = get_code(seed)
     username_password = get_user_pw()
@@ -99,14 +99,10 @@ def run(res_time, res_type, seed=0):
     return
 
 
-# def lambda_handler(event, context):
-#     print("This is the event {}".format(event))
-#     # this format must be used exactly
-#     # time: 10:00 AM
-#     time_workout = "10:00 AM"
-#     type_workout = "Individual Workout: Weight Room (ERC)"
-#     run(time_workout, type_workout)
-
-time_workout = "10:00 AM"
-type_workout = "Individual Workout: Weight Room (ERC)"
-run(time_workout, type_workout)
+def lambda_handler(event, context):
+    print("This is the event {}".format(event))
+    # this format must be used exactly
+    # time: 10:00 AM
+    time_workout = "10:00 AM"
+    type_workout = "Individual Workout: Weight Room (ERC)"
+    run(time_workout, type_workout)
