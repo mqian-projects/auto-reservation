@@ -1,6 +1,6 @@
 # Auto Reserve
 
-Auto Reserve is a script to automate gym reservations at the University of Maryland.
+Auto Reserve is a script to automate gym reservations at the University of Maryland. This is for educational purposes only.
 
 ![Alt text](/screenshot1.png?raw=true "Screenshot1")
 
